@@ -95,6 +95,8 @@ linksInternos.forEach((item)=>{
 })
 
 const elementoBody = document.querySelector("body");
+const elementosAposBody = document.querySelectorAll("body *");
+
 function callback_handleClickAnyElemento(event){
   console.log(event.target);
   //Remove o elemnto da página
