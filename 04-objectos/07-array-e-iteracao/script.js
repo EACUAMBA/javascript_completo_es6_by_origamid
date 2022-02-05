@@ -214,13 +214,13 @@ const compras = [
       preco: 'R$ 10,60' 
     } 
   ] 
-
-  const valorTotalDasCompras = compras.reduce((acomulador, actual)=>{
-    let preco = +actual.preco
-    .replace(/[R$]/g, '')
-    .replace(',', '.');
-    acomulador += preco;
-    return acomulador;
-  }, 0)
+ const connvertESomaReduce = (acomulador, actual)=>{
+  let preco = +actual.preco
+  .replace(/[R$]/g, '')
+  .replace(',', '.');
+  acomulador += preco;
+  return acomulador;
+};
+  const valorTotalDasCompras = compras.reduce(connvertESomaReduce, 0)
   console.log('Valor total: ', valorTotalDasCompras);
 
