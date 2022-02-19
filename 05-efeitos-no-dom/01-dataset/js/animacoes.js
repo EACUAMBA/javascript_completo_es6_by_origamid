@@ -2,15 +2,17 @@
 //use novas classe ou o atributo data para manipular o dom, não use classes do css, elas podem mudar.
 
 function initTab(){
-  const tabmenu = document.querySelectorAll(".js-tabmenu li");
-const tabcontent = document.querySelectorAll(".js-tabcontent section");
+  const tabmenu = document.querySelectorAll('[data-tab="menu"] li');
+const tabcontent = document.querySelectorAll('[data-tab="content"] section');
 
 if(tabmenu.length && tabcontent.length){
 tabcontent[0].classList.add("activo");
 //Vamos remover dos elemento a class activo depois adicionar classe de acordo com o numero que eu passar, o numero é a posição no array.
 function activateTab(index){
   tabcontent.forEach(item=>item.classList.remove("activo"));
-  tabcontent[index].classList.add("activo")
+  const direcao = tabcontent[index].dataset.anime;
+  tabcontent[index].classList.add("activo", direcao);
+  console.log(tabcontent[index])
 }
 
 tabmenu.forEach((item, index)=>{
@@ -25,7 +27,7 @@ initTab();
 
 //10 - Accordion List
 function initAccordion(){
-  const accordionList = document.querySelectorAll(".js-accordion dt");
+  const accordionList = document.querySelectorAll('[data-anime="accordion"] dt');
   if(!accordionList.length){
     return;
   }
@@ -47,7 +49,7 @@ initAccordion();
 
 //11-Scroll Suave
 function initScrollSuave(){
-  const linksInternos = document.querySelectorAll(".js-menu a[href^='#']");
+  const linksInternos = document.querySelectorAll('[data-menu="suave"] a[href^="#"]');
 
 function scrollToSection(event){
   event.preventDefault();
@@ -76,7 +78,7 @@ initScrollSuave();
 
 //12 Animação ao Scroll
 function animacaoScroll(){
-  const sections = document.querySelectorAll(".js-scroll");
+  const sections = document.querySelectorAll('[data-anime="scroll"]');
   if(!sections.length){
     return;
   }
