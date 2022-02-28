@@ -1,0 +1,9 @@
+O evento bubble é um evento que é causado ou disparado pelo elemento pai de um elemento.
+
+Exemplo prático:
+
+Se tivermos uma div com um evento de click e dentro dessa div um elemento button com um evento de click, ao clicarmos no button, vamos executar o código do evento do button e executaremos após isso o código ou instruções do evento da div (pai).
+
+A esse comportamento chamamos de efeito bubble, ou efeito cascata de evento.
+
+Isso pode ser muito irritante quando queremos fazer um evento e de repente o evento acciona outros eventos.
