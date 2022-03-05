@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulários</title>
+
+    <style>
+        label{
+            display: block;
+            font-family: "Open Sans", sans-serif;
+            font-size: 1rem;
+            margin-bottom: .5rem;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+        form{
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input, textarea{
+            width: 100%;
+            box-sizing: border-box;
+            padding: .5rem;
+            border: 2px solid #000;
+            font-size: 1rem;
+            margin-bottom: .5rem;
+        }
+
+        textarea{
+            max-height: 150px;
+        }
+    </style>
+</head>
+<body>
+<form name="contacto" id="contacto">
+    <label>Nome <input type="text" name="nome"></label>
+    <label>Email <input type="email" name="email"></label>
+    <label>Mensagem<textarea name="mensagem"></textarea></label>
+
+</form>
+
+<h3 class="texto"></h3>
+<script>
+    const contacto = document.forms['contacto'];
+    const texto = document.querySelector('.texto');
+    console.log(contacto.elements.email.value)
+
+    function handleKeyUp(event) {
+        texto.innerHTML = event.target.value;
+    }
+
+    contacto.addEventListener('keyup', handleKeyUp);
+</script>
+</body>
+</html>
