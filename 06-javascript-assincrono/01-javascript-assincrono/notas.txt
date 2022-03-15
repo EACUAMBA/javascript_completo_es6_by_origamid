@@ -1,0 +1,5 @@
+Processamento assíncrono é aquele que acontece no fundo, sem interromper outras instruções, diferente da programação sincronia que executa código por código em sequência.
+
+Como exemplos de classes que fornecem processamento assíncrono são Ajax, Promises, Fetch, Async, etc.
+
+Podemos realizar uma actividade ao termina da função, como, por exemplo, renderizar a view.
