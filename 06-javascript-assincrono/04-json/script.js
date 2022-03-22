@@ -15,7 +15,7 @@ fetch("./dados.json")
 
 
 //Classe JSON
-//.parse() - converrt uma string ou objecto JSON em um objecto JavaScript
+//.parse() - convert uma string ou objecto JSON em um objecto JavaScript
 //.stringfy() - Converte uma objecto em um objecto JSON
 fetch("./dados.json")
     .then(async (response) => {
