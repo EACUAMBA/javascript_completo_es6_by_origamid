@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Count down</title>
+</head>
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    .time_left{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #cccccc;
+        font-family: "Open Sans", sans-serif;
+    }
+    .days{
+        display: flex;
+        font-size: 2rem;
+        font-weight: bold;
+
+    }
+    .days::after{
+        content: "dias";
+        display: flex;
+        margin-left: 16px;
+        font-weight: lighter;
+
+    }
+    .time{
+        display: flex;
+        gap: 8px;
+        font-size: 1.5rem;
+    }
+
+
+
+</style>
+<body style=" margin: 0; display: flex; flex-direction: column;">
+
+<div class="time_left">
+    Faltam
+    <p class="days">0</p>
+    <div class="time">
+        <p class="hours">0</p>:
+        <p class="minutes">0</p>:
+        <p class="seconds">0</p>
+    </div>
+</div>
+
+<script src="./script.js" type="module"></script>
+</body>
+</html>
