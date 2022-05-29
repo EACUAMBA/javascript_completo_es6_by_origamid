@@ -20,5 +20,42 @@ console.log(fraseNova);
 // /\./ vai escapar o ponto e selecionar os pontos ja.
 // /\[/ - seleciona o colchete aberto
 
+//Podemos colocar um colchete entre um conjunto de caractere para selecionar variacao de uma palavra:
+// /Mo[cz]ambique/
+
+//O - dentro de colchetes servem para indicar um intervalo.
+// /[a-zA-Z]/ seleciona o intervalo de cractere de a ate z e de A ate Z na tabela unicode
+// Podmeos usar o acento circunflexo para negar caracteres /[^a]/ nao vai selecionar o caractere a
+
+//Caracteres especiais
+// +*?^$\.[]{}()|/
+
+// \w -sleciona caracteres alfanumericos o mesmo que /[a-zA-Z0-9_]/
+// \W nega o qe vimos acima
+// \d -seleciona digito
+// \d nega digito
+// \s seleciona espaco, quebra de linha e tab
+// podemos selecionar tudi com /[\S\s]/
+
+//Quantificador
+// /iii/ - seleciona tres is seguidos.
+// /i{4}/ - seleciona 4 i seguidos
+// /i{2, 3}/ - selecion de dois a tres is
+// /i{2,}/ -> seleciona dois ou mais is.
+// /\w{1,}/g seleciona todos os caracteres dentro d conjunto alfanumeros um ou mais
+// /i+/g seleciona um ou mais is juntos.
+// /i*/ seleciona 0 ou mais ocorencias de um padrao
+// /i?/ seleciona qundo tiver e mesmo quando nao tiver o i
+// /a|b/ seleiona a ou b
+// -> usamos para fazer uma selecao que deve ter u nao caracters.
+
+// /^\w+/g -> seleiona a aplimeira combinacao que inicia com valores alfanumeros
+// /\w+$/g -> selecion a frase que termina com valores alfanumericos
+// /\m/ -> seleciona muitas linhas
+// \n -> carcter de nova linha
+// /\uvalorunicode/ -> seleciona valores unicode
+
+
+
 
 
