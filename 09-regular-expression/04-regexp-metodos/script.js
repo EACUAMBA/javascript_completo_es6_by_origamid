@@ -56,8 +56,55 @@ while((value = regexp_script.exec(frase_)) !== null){
 }
 
 //Metodos de String
-//match() -> retorna o array ocom todas as possibilidades se passado sem o g de glibal
-let match = frase.match(regexp_);
-console.log()
+//match() -> verifica se a string conbina com a expressão e retronar um array ou um object.
+//regexp com g-> retorna uma array com todas as palavras que obedecem ao padrão especificado.
+//regexp sem g -> retorna um dado como o do exec().
+let sentence = 'JavaScript, TypeScript, CoffeeScript, Java';
+const regexpComG = new RegExp(/\w+(?=script)/, 'gi')
+const regexpSemG = new RegExp(/\w+(?=script)/, 'i')
+let match = sentence.match(regexpComG);
+let matchSemG = sentence.match(regexpSemG);
+console.log(match)
+console.log(matchSemG)
+
+//Split -> retorna uma array separado usando o valor que combina com o regexp, remove o que der match
+console.log(sentence.split(/(script,\s)/))
+
+// replace() -> substitui o que conbina com a expressão regular.
+const tags = `
+<ul>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+`;
+
+//faz replace em tudo
+console.log(tags.replace(/ul/g, 'ol'));
+
+//Substitui o nome das tags
+console.log(tags.replace(/(?<=<\/?)\w+/g, 'edilson'));
+console.log(tags.replace(/(?<=<\/?)\w+/g, '$& --'));
+
+const emails = `
+    empresa@gmailf.com
+    empresa@ggmail.com
+    empresa@gmaiI.com
+    empresa.erico@gmail.com
+`;
+
+const regexp_email = /(\w+@)([\w.]+)/g
+const result = emails.replace(regexp_email, '$1gmail.com')
+console.log(result);
+
+//usando callback
+const rr = emails.replace(regexp_email, function (...args){
+    console.log(args[2]);
+    if(args[2]){
+        return args[1] + 'hotmail.com'
+    }
+})
+
+console.log(rr)
+
 
 
