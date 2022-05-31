@@ -1,12 +1,12 @@
-const cpf = document.querySelectorAll('.cpf li');
-console.log("\nNormal", cpf, "\n");
+const cpfs = document.querySelectorAll('.cpf li');
+console.log("\nNormal", cpfs, "\n");
 
 //Com o destructing podemos desestruturar os dados para dentro de um array.
 const elementsInnerText = ([...elements]) => {
   // const arrayElements = Array.from(elements);
   return elements.map(element => element.innerText);
 }
-console.log("\nInnerText", elementsInnerText(cpf), "\n");
+console.log("\nInnerText", elementsInnerText(cpfs), "\n");
 
 //Limpar o CPF
 const limparCPF = (cpf) => {
@@ -19,7 +19,20 @@ const construirCPF = (cpf) => {
 }
 
 const formatarCPFs = (cpfs) =>{
-  return cpfs.map(construirCPF());
+  return cpfs.map(construirCPF);
 }
 
-console.log("\nCPF Formatados: ", formatarCPFs(cpf))
+const subtituiCPFs = (cpfElement)=>{
+  const cpfsString = elementsInnerText(cpfElement);
+  const cpfsLimpos = cpfsString.map(limparCPF);
+  const cpfFormatados = formatarCPFs(cpfsLimpos);
+  cpfElement.forEach(
+      (s, index)=>{
+        s.innerText = cpfFormatados[index];
+      }
+  );
+}
+
+subtituiCPFs(cpfs)
+
+console.log("\nCPF Formatados: ", formatarCPFs(elementsInnerText(cpfs)))
