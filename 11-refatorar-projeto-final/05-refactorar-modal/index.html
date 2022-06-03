@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animais Fantásticos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .menu-mobile {
+            background-color: aqua !important;
+        }
+
+        .activo-b {
+            outline: 5px solid red;
+        }
+    </style>
+
+    <script>
+
+        //Adicionando uma classe para verificar se o utilizador tem JS activo no seu browser.
+        document.documentElement.className += " js";
+    </script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <nav class="menu" data-menu="suave">
+            <button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
+            <ul data-menu="lista" id="menu">
+                <li><a href="#animais">Animais</a></li>
+                <li data-dropdown>
+                    <a href="index.html">Sobre</a>
+                    <ul class="dropdown_menu">
+                        <li><a href="empresa.html">A Empresa</a></li>
+                        <li><a href="empresa.html">A Equipe</a></li>
+                        <li><a href="empresa.html">Socios</a></li>
+                        <li><a href="empresa.html">investidores</a></li>
+                    </ul>
+                </li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="https://www.eacuamba.com" style="display: flex;
+    align-items: center;" data-modal="abrir">Login Dev <svg style="display: inline-block;
+    width: 20px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                            <g fill="currentColor" class="nc-icon-wrapper">
+                                <path fill-rule="evenodd"
+                                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z">
+                                </path>
+                            </g>
+                        </svg></a></li>
+            </ul>
+        </nav>
+
+        <section class="grid-section animais" id="animais" data-anime="scroll">
+            <h1 class="titulo" data-nome="Edilson">Animais Fantásticos</h1>
+            <ul class="animais-lista" data-tab="menu">
+                <li><img src="./img/imagem1.jpg" alt="Image1"></li>
+                <li><img src="./img/imagem2.jpg" alt="Image1"></li>
+                <li><img src="./img/imagem3.jpg" alt="Image1"></li>
+                <li><img src="./img/imagem4.jpg" alt="Image1"></li>
+                <li><img src="./img/imagem5.jpg" alt="Image1"></li>
+                <li><img src="./img/imagem6.jpg" alt="Image1"></li>
+            </ul>
+            <div class="animais-descricao" data-tab="content">
+                <section data-anime="show-right">
+                    <h2>Rapousa</h2>
+                    <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de
+                        porte
+                        médio, caracterizados
+                        por um focinho comprido e uma cauda longa e peluda.</p>
+                    <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos
+                        felídeos.</p>
+                    <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das
+                        "raposas
+                        verdadeiras", do qual a raposa vermelha é a mais comum.</p>
+                    <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos
+                        felídeos.</p>
+                </section>
+
+                <section data-anime="show-down">
+                    <h2>Esquilo</h2>
+                    <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de
+                        porte
+                        médio, caracterizados
+                        por um focinho comprido e uma cauda longa e peluda.</p>
+                    <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos
+                        felídeos.</p>
+                    <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das
+                        "raposas
+                        verdadeiras", do qual a raposa vermelha é a mais comum.</p>
+                    <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos
+                        felídeos.</p>
+                </section>
+
+                <section data-anime="show-right">
+                    <h2>Urso</h2>
+                    <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de
+                        porte
+                        médio, caracterizados
+                        por um focinho comprido e uma cauda longa e peluda.</p>
+                    <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos
+                        felídeos.</p>
+                    <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das
+                        "raposas
+                        verdadeiras", do qual a raposa vermelha é a mais comum.</p>
+                    <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos
+                        felídeos.</p>
+                </section>
+
+                <section data-anime="show-down">
+                    <h2>Lobo</h2>
+                    <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de
+                        porte
+                        médio, caracterizados
+                        por um focinho comprido e uma cauda longa e peluda.</p>
+                    <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos
+                        felídeos.</p>
+                    <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das
+                        "raposas
+                        verdadeiras", do qual a raposa vermelha é a mais comum.</p>
+                    <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos
+                        felídeos.</p>
+                </section>
+
+                <section data-anime="show-right">
+                    <h2>Macaco</h2>
+                    <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de
+                        porte
+                        médio, caracterizados
+                        por um focinho comprido e uma cauda longa e peluda.</p>
+                    <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos
+                        felídeos.</p>
+                    <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das
+                        "raposas
+                        verdadeiras", do qual a raposa vermelha é a mais comum.</p>
+                    <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos
+                        felídeos.</p>
+                </section>
+
+                <section data-anime="show-down">
+                    <h2>Leão</h2>
+                    <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de
+                        porte
+                        médio, caracterizados
+                        por um focinho comprido e uma cauda longa e peluda.</p>
+                    <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos
+                        felídeos.</p>
+                    <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das
+                        "raposas
+                        verdadeiras", do qual a raposa vermelha é a mais comum.</p>
+                    <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos
+                        felídeos.</p>
+                </section>
+            </div>
+        </section>
+
+        <section class="grid-section faq" id="faq" data-anime="scroll">
+            <h1 class="titulo">FAQ</h1>
+            <dl class="faq-lista" data-anime="accordion">
+                <dt>Qual a idade dos animais?</dt>
+                <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte
+                    médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
+                <dt>Eles são fantásticos?</dt>
+                <dd>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos
+                    felídeos.</dd>
+                <dt>Qual a diferença?</dt>
+                <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte
+                    médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
+                <dt>Como proteger?</dt>
+                <dd>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos
+                    felídeos.</dd>
+            </dl>
+        </section>
+
+        <section class="grid-section numeros" data-anime="scroll">
+            <h1 class="titulo">Números</h1>
+            <div class="numeros-grid">
+
+            </div>
+        </section>
+
+        <section class="grid-section contacto" id="contacto" data-anime="scroll">
+            <h1 class="titulo">Contacto</h1>
+            <div class="mapa" data-tooltip aria-label="Endereço facil de seguir..."><img src="./img/mapa.png" alt="Mapa"></div>
+            <ul>
+                <li>edilsoncuamba@gmail.com</li>
+                <li>842473772</li>
+                <li>Rua maringue r, 35</li>
+                <li>Maputo, Moçambique</li>
+                <li>Doe <span class="btc-preco">0</span> Bitcoin para nos ajudar...</li>
+                <li data-semana="1, 2, 3, 4, 5, 5" data-horario="8, 16">Seg á Sex das 8 até as 16</li>
+            </ul>
+        </section>
+
+        <footer class="copy">
+            <p>Todos direitos reservados</p>
+        </footer>
+    </div>
+
+    <section class="modal-container" data-modal="container">
+        <div class="modal">
+            <button class="fechar" data-modal="fechar">X</button>
+            <form action="">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha">
+
+                <input type="submit" value="Entrar" data-modal="login">
+            </form>
+        </div>
+    </section>
+
+
+    <script type="module" src="./js/main.js"></script>
+    <script src="./js/aula.js"></script>
+</body>
+
+</html>
