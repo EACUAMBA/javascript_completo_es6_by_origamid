@@ -1,0 +1,18 @@
+.numeros-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 32px;
+}
+
+.numeros-grid h3{
+    font-family: "Open Sans", sans-serif;
+    margin-bottom: .5rem;
+    font-size: 2rem;
+}
+
+.numeros-grid span{
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    color: #EE5544;
+    font-size: 1.5rem;
+}
