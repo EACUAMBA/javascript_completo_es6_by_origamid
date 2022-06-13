@@ -1,0 +1,31 @@
+/* reset */
+body{
+  margin: 0;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+.slide-wrapper{
+  overflow: hidden;
+}
+
+.slide{
+  display: flex;
+}
+
+.slide li{
+  /* faz com que os elementos do flex, mantenham o seu tamanho, sempre, isso vai adicionar scroll se o width for pouco.*/
+  flex-shrink: 0;
+  width: 80vh;
+  max-width: 800px;
+  margin: 0 20px
+}
+
