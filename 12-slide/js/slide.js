@@ -1,3 +1,5 @@
+import debounce from './debounce.js';
+
 export default class Slide {
   constructor(slide, wrapper) {
     this.slide = document.querySelector(slide);
@@ -5,12 +7,15 @@ export default class Slide {
 
     this.dist = { finalPosition: 0, startX: 0, movement: 0, movePosition: 0 }
 
+    this.activeClass = 'active';
+
   }
 
   bindEvents() {
     this.onStart = this.onStart.bind(this);
     this.onMove = this.onMove.bind(this);
     this.onEnd = this.onEnd.bind(this);
+    this.onResize = debounce(this.onResize.bind(this));
   }
 
   //slide config
@@ -28,6 +33,7 @@ export default class Slide {
   }
 
   changeSlide(index) {
+
     const activeSlide = this.slideArray[index];
     this.slideIndexNav(index);
     this.moveSlide(this.slideArray[index].position)
@@ -44,8 +50,8 @@ export default class Slide {
     console.log(this.index);
   }
 
-  transition(active){
-    this.slide.style.transition = active ?  'transform .3s' : '';
+  transition(active) {
+    this.slide.style.transition = active ? 'transform .3s' : '';
   }
 
   moveSlide(distX) {
@@ -100,15 +106,24 @@ export default class Slide {
     else {
       this.changeSlide(this.index.active);
     }
+    this.changeActiveClass();
 
   }
 
   addSlideEvents() {
+    this.addResizeEvent();
     this.wrapper.addEventListener('mousedown', this.onStart);
     this.wrapper.addEventListener('touchstart', this.onStart);
     this.wrapper.addEventListener('mouseup', this.onEnd);
     this.wrapper.addEventListener('touchend', this.onEnd);
 
+  }
+
+  changeActiveClass() {
+    this.slideArray.forEach(({ position, item }) => {
+      item.classList.remove(this.activeClass);
+    })
+    this.slideArray[this.index.active].item.classList.add(this.activeClass)
   }
 
   activePrevSlide() {
@@ -121,6 +136,18 @@ export default class Slide {
     if (this.index.next !== undefined) {
       this.changeSlide(this.index.next);
     }
+  }
+
+  onResize() {
+    setTimeout(() => {
+      this.slideConfig();
+      this.changeSlide(this.index.active);
+    }, 100);
+
+  }
+
+  addResizeEvent() {
+    window.addEventListener('resize', this.onResize);
   }
 
   init() {

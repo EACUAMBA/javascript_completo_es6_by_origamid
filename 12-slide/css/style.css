@@ -21,11 +21,28 @@ img{
   display: flex;
 }
 
+.slide:hover{
+  will-change: transform;
+}
+
+
+
 .slide li{
   /* faz com que os elementos do flex, mantenham o seu tamanho, sempre, isso vai adicionar scroll se o width for pouco.*/
   flex-shrink: 0;
   width: 80vh;
   max-width: 800px;
-  margin: 0 20px
+  margin: 0 20px;
+  opacity: .5;
+  transform: scale(.8);
+  transition: .4s;
+
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
 }
 
+.slide li.active{
+  opacity: 1;
+  transform: scale(1);
+}
