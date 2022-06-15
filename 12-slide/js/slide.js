@@ -16,6 +16,8 @@ export default class Slide {
     this.onMove = this.onMove.bind(this);
     this.onEnd = this.onEnd.bind(this);
     this.onResize = debounce(this.onResize.bind(this));
+    this.activeNextSlide = this.activeNextSlide.bind(this);
+    this.activePrevSlide = this.activePrevSlide.bind(this);
   }
 
   //slide config
@@ -57,8 +59,6 @@ export default class Slide {
   moveSlide(distX) {
     this.dist.movePosition = distX;
     this.slide.style.transform = `translate3d(${distX}px, 0px, 0px)`;
-    console.log(distX)
-    console.log(this.slide.style.transform)
   }
 
   updatePosition(clientX) {
@@ -129,12 +129,14 @@ export default class Slide {
   activePrevSlide() {
     if (this.index.prev !== undefined) {
       this.changeSlide(this.index.prev);
+      this.changeActiveClass();
     }
   }
 
   activeNextSlide() {
     if (this.index.next !== undefined) {
       this.changeSlide(this.index.next);
+      this.changeActiveClass();
     }
   }
 
@@ -158,4 +160,19 @@ export default class Slide {
     this.transition(true);
     return this;
   }
+}
+
+
+export class SlideNav extends Slide {
+  addArrow(prev, next) {
+    this.prevElement = document.querySelector(prev);
+    this.nextElement = document.querySelector(next);
+    this.addArrowEvent();
+  }
+
+  addArrowEvent() {
+    this.prevElement.addEventListener('click', this.activePrevSlide);
+    this.nextElement.addEventListener('click', this.activeNextSlide);
+  }
+
 }
