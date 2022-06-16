@@ -34,9 +34,9 @@ img{
 .slide li{
   /* faz com que os elementos do flex, mantenham o seu tamanho, sempre, isso vai adicionar scroll se o width for pouco.*/
   flex-shrink: 0;
-  width: 80vh;
+  width: 80%;
   max-width: 800px;
-  margin: 0 20px;
+  margin: 0 16px;
   opacity: .5;
   transform: scale(.8);
   transition: .4s;

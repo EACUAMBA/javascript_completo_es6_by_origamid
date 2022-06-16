@@ -12,12 +12,14 @@
 }
 
 .modal{
-  min-width: 300px;
+ width: 80vw;
+ max-width: 600px;
   background-color: white;
   padding: 40px;
   border: 18px solid #fb5;
   box-shadow: 0 0 0 10px white;
   position: relative;
+  box-sizing: border-box;
 }
 
 .fechar{
@@ -29,7 +31,7 @@
   border: 4px solid white;
   border-radius: 50%;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
-  background-color: #E54;
+  background: #E54 url('./../img/fechar.svg') no-repeat center center;
   font-size: 1.2rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
   cursor: pointer;
@@ -47,6 +49,9 @@
   width: 100%;
   padding: .7rem .5rem;
   box-sizing: border-box;
+
+  border: 2px solid #222;
+  border-radius: 0px;
 }
 
 .modal input[type="submit"] {

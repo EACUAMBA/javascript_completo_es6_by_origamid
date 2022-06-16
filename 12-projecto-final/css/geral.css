@@ -266,12 +266,18 @@ body {
   display: none;
 }
 .js [data-anime="accordion"] dt::after{
-  content: "\21B4";
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: url('../img/arrow-red.svg') no-repeat center center;
+  transform: rotate(90deg);
   margin-left: 10px;
 }
 
 .js [data-anime="accordion"] dt.activo::after{
-  content: "\2934";
+  content: "";
+  transform: rotate(-90deg);
 }
 
 .js [data-anime="accordion"] dd.activo{
@@ -337,4 +343,28 @@ body {
 .btc-preco{
   background: greenyellow;
   padding: .2rem .5rem;
+}
+
+.arrow-back{
+  background: url('./../img/arrow-black.svg') no-repeat center center;
+  display: inline-block;
+  width: 8px;
+  height: 10px;
+}
+.numeros-grid span{
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    color: #EE5544;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .titulo {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    grid-column: 1 / 4;
+  }
 }
